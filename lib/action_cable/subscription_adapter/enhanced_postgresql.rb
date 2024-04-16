@@ -6,7 +6,7 @@ require "connection_pool"
 module ActionCable
   module SubscriptionAdapter
     class EnhancedPostgresql < PostgreSQL
-      MAX_NOTIFY_SIZE = 7997 # documented as 8000 bytes, but there appears to be some overhead in transit
+      MAX_NOTIFY_SIZE = 0 # documented as 8000 bytes, but there appears to be some overhead in transit
       LARGE_PAYLOAD_PREFIX = "__large_payload:"
       INSERTS_PER_DELETE = 100 # execute DELETE query every N inserts
 
